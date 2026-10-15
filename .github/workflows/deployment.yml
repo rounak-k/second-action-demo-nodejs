@@ -18,6 +18,7 @@ jobs:
           - name: Run tests
             run: npm test
     deploy:
+        needs: test
         runs-on: ubuntu-latest
         steps:
           - name: Get code
@@ -33,6 +34,6 @@ jobs:
           - name: Deploy to server
             run: echo "Deploying to server..." # Replace with actual deployment command
             
-
+    
               
           
